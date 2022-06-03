@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="parentValue" type="String" />
+    <aura:attribute name="keyword" type="String" />
+    <lightning:card title="Aura Parent to Child">
+    <div class="slds-p-around_medium">
+	<h1><b>Parent Component</b></h1>
+        <lightning:input type = "String" label = "Keyword" value = "{!v.keyword}" onchange = "{!c.sendValue}"/><br/>
+        <lightning:button label="Send value to child" iconName="utility:comments" iconPosition="left"  variant="brand" />
+    </div>
+    <c:childComponent childValue="{!v.parentValue}" />
+    </lightning:card>
+</aura:component>

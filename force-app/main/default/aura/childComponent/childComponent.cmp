@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="childValue" type="String" />
+    <lightning:card>
+	<h1 class = "slds-p-around_medium"><b>Child Component</b> Here is the value from Parent : {!v.childValue}</h1>
+    </lightning:card>
+</aura:component>
